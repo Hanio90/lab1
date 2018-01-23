@@ -1,0 +1,46 @@
+﻿using System;
+
+namespace Lab1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Input (2 variables)
+
+            double Width;
+            double Length;
+            double Area;
+            String Choice = "Yes";
+
+            while (Choice == "Yes")
+            {
+                Console.WriteLine("Please enter the Width");
+                Width = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Please enter the Length");
+                Length = double.Parse(Console.ReadLine());
+
+                Area = Length * Width;
+                double perimeter = 2 * (Width + Length);
+
+                Console.WriteLine("The AREA of your rectangle is: {0}", Area);
+
+                Console.WriteLine("The PERIMETER of your rectangle is: {0}", perimeter);
+
+                Console.WriteLine("Would you like to try again? Please Enter Yes or No");
+                Choice = Console.ReadLine();
+
+
+                 //Gives the user a choice
+                if (Choice != "Yes")
+                    Choice = "No";
+
+            }
+
+
+        }
+
+
+    }
+}
